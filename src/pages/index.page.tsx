@@ -26,7 +26,7 @@ export default function Home() {
           <p>
             <span className={styles.blue}>C</span><span className={styles.pink}>o</span><span className={styles.clementine}>m</span><span className={styles.nectarine}>m</span><span className={styles.highlighter}>u</span><span className={styles.blue}>n</span><span className={styles.pink}>i</span><span className={styles.clementine}>t</span><span className={styles.nectarine}>y</span> <span className={styles.highlighter}>G</span><span className={styles.blue}>u</span><span className={styles.pink}>i</span><span className={styles.clementine}>d</span><span className={styles.nectarine}>e</span><span className={styles.highlighter}>l</span><span className={styles.blue}>i</span><span className={styles.pink}>n</span><span className={styles.clementine}>e</span><span className={styles.nectarine}>s</span><span className={styles.highlighter}>:</span> Nothing NSFW, illegal, or discriminatory. No spam. Be cool to each other.
           </p>
-          <a href="https://denver-tech-talk.slack.com">https://denver-tech-talk.slack.com</a>
+          <a href="https://join.slack.com/t/denver-tech-talk/shared_invite/zt-1qwc85z2o-3rurqyU6nxBYroPlcBSC1Q">https://denver-tech-talk.slack.com</a>
         </div>
       </main>
     </>
