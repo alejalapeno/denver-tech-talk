@@ -1,0 +1,93 @@
+@use "sass:math";
+ 
+@function betterClamp($minSize, $maxSize, $minWidth: 400, $maxWidth: 1200) {
+    // source: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    // convert to rem
+    $minSize: math.div($minSize, 16);
+    $maxSize: math.div($maxSize, 16);
+    $maxWidth: math.div($maxWidth, 16);
+    $minWidth: math.div($minWidth, 16);
+    // do calculations
+    $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+    $yAxisIntersection: -$minWidth * $slope + $minSize;
+    // output as rem
+    $minSize: $minSize * 1rem;
+    $maxSize: $maxSize * 1rem;
+    @return clamp(
+        #{$minSize},
+        #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+        #{$maxSize}
+    );
+}
+
+.title {
+  font-family: 'Title';
+  text-transform: uppercase;
+  max-width: 8rem;
+  margin: 0 0 2rem;
+  line-height: 0.9;
+  font-size: betterClamp(100, 250);
+
+  sup {
+    font-size: .1em;
+    vertical-align: super;
+    position: relative;
+    top: -5rem;
+  }
+}
+
+.copy {
+    max-width: 600px;
+    font-size: 1.5rem;
+    line-height: 1.75;
+}
+
+.description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0 0 5rem;
+}
+
+.nsfw {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    color: red;
+}
+
+.spam {
+    color: #f2e213;
+    background-color: #232765;
+    border-radius: .2rem;
+    padding: .2rem;
+    font-family: 'Comic Sans MS';
+}
+
+.blue {
+    color: #70d6ff;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.pink {
+    color: #ff70a6;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.clementine {
+    color: #ff9770;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.nectarine {
+    color: #ffd670;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.highlighter {
+    color: #e9ff70;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+}
