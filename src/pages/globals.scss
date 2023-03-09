@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem 2rem 8rem;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #70d6ff;
+}
+
+@font-face {
+    font-family: 'Title';
+    src: url('/title.woff2') format('woff2'),
+        url('/title.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
